@@ -26,6 +26,7 @@ public class AtomicExample6 {
         ExecutorService executorService = Executors.newCachedThreadPool();
         final Semaphore semaphore = new Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
+        //方法调用了5000次，但test方法就只执行了一次，原子性修改了从false搭配true
         for (int i = 0; i < clientTotal ; i++) {
             executorService.execute(() -> {
                 try {

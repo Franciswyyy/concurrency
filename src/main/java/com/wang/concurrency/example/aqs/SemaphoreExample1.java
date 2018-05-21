@@ -8,7 +8,7 @@ import java.util.concurrent.Semaphore;
 @Slf4j
 public class SemaphoreExample1 {
 
-    private final static int threadCount = 20;
+    private static final int threadCount = 20;
 
     public static void main(String[] args) throws Exception{
 

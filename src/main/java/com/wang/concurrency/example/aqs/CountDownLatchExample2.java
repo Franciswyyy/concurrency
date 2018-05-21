@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class CountDownLatchExample2 {
 
-    private final static int threadCount = 200;
+    private static final int threadCount = 200;
 
     public static void main(String[] args) throws Exception {
 

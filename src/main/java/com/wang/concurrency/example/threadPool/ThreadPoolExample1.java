@@ -12,6 +12,7 @@ public class ThreadPoolExample1 {
 
         ExecutorService executorService = Executors.newCachedThreadPool();
 
+
         for (int i = 0; i < 10; i++) {
             final int index = i;
             executorService.execute(new Runnable() {

@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 @Slf4j
 public class volatileExample {
 
-    private volatile static boolean isRunning = true;
+    private static boolean isRunning = true;
 
     private static void shutdown(){
         isRunning = false;
@@ -23,8 +23,6 @@ public class volatileExample {
     }
 
 
-
-
     public static void main(String[] args) throws InterruptedException{
         new Thread(() -> {
             isStart(Thread.currentThread().getName());
@@ -34,7 +32,5 @@ public class volatileExample {
 
         new Thread(() -> shutdown()).start();
     }
-
-
 }
 
